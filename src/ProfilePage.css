@@ -1,0 +1,330 @@
+.loading-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-family: sans-serif;
+    font-size: 60px;
+}
+
+.loading {
+    width: 300px;
+    height: 350px;
+}
+
+.profilepage-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.profile-content {
+    display: flex;
+    flex: 1;
+    position: relative;
+    flex-direction: row;
+}
+
+.info-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.profile-header {
+    flex-direction: row;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: "Baloo Tammudu", sans-serif;
+    font-size: 18px;
+    width: 100%;
+}
+
+
+
+.information {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    font-size: 25px;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.profile-edit-container {
+    font-family: Verdana, sans-serif;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.sign-out-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    z-index: 10;
+}
+
+.sign-out {
+    background-color: #ffffff;
+    color: #100f0f;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-out:hover {
+    color: #ffb637;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.quote-image {
+    display: block;
+    width: 50px;
+    height: 64px;
+    background-image: url('./assets/paws.png');
+}
+
+.vector {
+    position: absolute;
+    right: 99px;
+    bottom: 70px;
+    background-image: url('./assets/Vector.png');
+    width: 30px;
+    height: 30px;
+}
+
+.profile-value {
+    display: flex;
+    gap: 10px;
+    margin-top: 64px;
+    margin-left: 50px;
+    margin-bottom: 104px;
+}
+
+.profile-info {
+    font-family: "Baloo Tammudu", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 2.5;
+    color: #000000;
+    display: flex;
+}
+
+.profile-picture {
+    width: 450px;
+    background-color: black;
+    height: 450px;
+    display: flex;
+    background-image: url('./assets/Berta.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 1120px) {
+    .profile-picture {
+        width: 350px;
+        height: 350px;
+    }
+    .header-text {
+        margin-right: 200px;
+    }
+    .info-container{
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .profile-picture {
+        width: 300px;
+        height: 300px;
+    }
+    .info {
+        font-size: 20px;
+    }
+    .info-container{
+        margin-bottom: 100px;
+    }
+    .header-text {
+        margin-right: 200px;
+    }
+}
+
+@media (max-width: 890px) {
+    .profile-picture {
+        width: 300px;
+        height: 300px;
+    }
+    .info-container{
+        margin-bottom: 250px;
+    }
+
+
+    .profile-value {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .header-text {
+        margin-right: 5px;
+    }
+}
+
+.profile-button-container {
+    display: none;
+}
+
+.profile-button {
+    background-color: #ffb637;
+    color: #100f0f;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 11px;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+    background-color: #dddddd;
+}
+
+.save-button, .cancel-button, .edit-button {
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.save-button {
+    background-color: #ffb637;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.cancel-button {
+    background-color: #E4067E;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.edit-button {
+    background-color: #ffffff;
+    color: black;
+}
+
+.save-button:hover, .cancel-button:hover, .edit-button:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .profile-button-container {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 100;
+    }
+
+    .profile-content .profile-bar {
+        display: none;
+    }
+
+    .profile-content .profile-bar.show {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .profile-content .profile-bar {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .sign-out-container {
+        top: 10px;
+        right: 10px;
+        font-size: 18px;
+    }
+
+    . sign-out-container img {
+        width: 24px;
+        height: 24px;
+    }
+}

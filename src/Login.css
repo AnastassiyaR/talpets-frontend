@@ -1,0 +1,31 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.login-title {
+    font-family: 'Verdana', sans-serif;;
+    color: white;
+    font-size: 50px;
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.tuhkur-image1 {
+    position: absolute;
+    top: 15%;
+    width: 30%;
+    opacity: 0.5;
+}
+
+.tuhkur-image2 {
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    transform: rotate(180deg);
+    width: 30%;
+    opacity: 0.5;
+}

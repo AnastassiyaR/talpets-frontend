@@ -1,0 +1,128 @@
+.shop-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.shop-content {
+    display: flex;
+    flex: 1;
+    position: relative;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.shop-button-container {
+    display: none;
+}
+
+.shop-button {
+    background-color: #ffb637; /* Main button background color */
+    color: #100f0f;
+    padding: 5px 15px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 11px; /* Font size */
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold; /* Bold font */
+    cursor: pointer; /* Cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.shop-button:hover {
+    background-color: #dddddd; /* Background color on hover */
+}
+
+/* Styles for showing the button on mobile devices */
+@media (max-width: 768px) {
+    .shop-button-container {
+        display: block; /* Show button on mobile */
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 100;
+    }
+
+    /* ShopBar hidden by default on mobile devices */
+    .shop-content .shop-bar {
+        display: none;
+    }
+
+    /* Show ShopBar when it has the 'show' class */
+    .shop-content .shop-bar.show {
+        display: block;
+    }
+}
+
+/* On larger screens, ShopBar is always visible */
+@media (min-width: 769px) {
+    .shop-content .shop-bar {
+        display: block; /* ShopBar always visible on large screens */
+    }
+}
+
+.profile-column-container {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.profile {
+    border-radius: 5px;
+    width: 250px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#ffffff, #c1bebe);
+    align-items: center;
+    height: 300px;
+}
+
+.profile-text {
+    width: 180px;
+    display: flex;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 180px;
+}
+
+.profile-link {
+    display: block; /* Or inline-block to behave like a block element */
+    text-align: center; /* Center the content inside the link */
+    width: 100%; /* Take full width if needed */
+}
+
+.profile p {
+    font-size: 24px;
+    color: #000000;
+    font-family: 'Baloo Tammudu', sans-serif;
+    margin: 0; /* Remove default margin on the <p> tag */
+}
+
+@media (max-width: 1470px) {
+    .profile {
+        width: 200px;
+        height: 250px;
+        align-content: center;
+    }
+    .profile-text {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 1252px) {
+    .profile {
+        width: 170px;
+        height: 220px;
+    }
+
+    .profile-text {
+        width: 100px;
+        height: 100px;
+    }
+}

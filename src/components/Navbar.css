@@ -1,0 +1,88 @@
+.navbar {
+  background-color: #ffffff; /* Background color */
+  padding: 10px 20px; /* Padding */
+  font-family: 'Verdana', sans-serif; /* Apply font to the entire navbar */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Evenly distribute elements */
+  align-items: center; /* Vertical alignment */
+  flex-wrap: wrap; /* Allow elements to wrap */
+}
+
+.navbar-brand {
+  display: flex;
+  color: #000000; /* Text color */
+}
+
+/* Logo and brand name */
+.logo {
+  height: 40px; /* Logo height */
+  margin-right: 10px; /* Space between logo and brand name */
+}
+
+.brand-name {
+  font-size: 30px; /* Font size of the brand name */
+  color: #000000; /* Text color */
+  font-weight: bold; /* Apply bold font weight */
+}
+
+.nav-links {
+  list-style: none; /* Remove list markers */
+  display: flex; /* Horizontal layout of menu items */
+  margin: 0; /* Remove outer margins */
+  padding: 0; /* Remove inner padding */
+  font-family: 'Verdana', sans-serif; /* Apply font to links */
+}
+
+.nav-link {
+  color: #000000; /* Link text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 15px; /* Padding around links */
+}
+
+.nav-link:hover {
+  color: #0073e6; /* New text color on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Background color on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.navbar-icons {
+  display: flex; /* Horizontal layout for icons */
+}
+
+.icon-link {
+  margin-left: 15px; /* Space between icons */
+}
+
+.icon {
+  height: 24px; /* Icon height */
+}
+
+
+/* If you are using SVG icons, add fill: currentColor */
+.icon {
+  width: 26px;
+  height: 26px;
+  fill: currentColor; /* Use current text color for SVG icons */
+}
+
+/* Responsiveness for screens smaller than 768px */
+@media (max-width: 768px) {
+  .brand-name {
+    font-size: 1.5rem;
+    color: #100f0f; /* Main text color for brand name on small screens */
+  }
+
+  /* Reduce menu font size and stack elements vertically */
+  .nav-links .nav-item {
+    margin: 0.5rem 0;
+    font-size: 1.0rem;
+  }
+
+  /* Center icons */
+  .navbar-icons {
+    justify-content: center;
+  }
+}

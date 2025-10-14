@@ -1,0 +1,112 @@
+.shop-bar {
+    background: linear-gradient(#2e2a5a, #1d7ea5);
+    color: white;
+    padding: 30px;
+    display: block;
+    font-family: 'Verdana', sans-serif;
+    position: relative;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    font-family: 'Verdana', sans-serif;
+    color: #dddddd;
+    letter-spacing: 1px;
+}
+
+.filter-section label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Verdana', sans-serif;
+    transition: color 0.3s ease;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:hover {
+    border-color: #ffb637;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 4px;
+    border: solid #2e2a5a;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 3px;
+    left: 2px;
+}
+
+.filter-section label:hover {
+    color: #ffb637;
+}
+
+.shop-bar.show {
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .shop-bar {
+        display: none;
+    }
+
+    .shop-bar.show {
+        display: block;
+    }
+
+    .filter-section {
+        margin-bottom: 15px;
+    }
+
+    .filter-section h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        font-family: 'Verdana', sans-serif;
+        color: #dddddd;
+        letter-spacing: 1px;
+    }
+
+    .filter-section label {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .filter-section input[type="checkbox"] {
+        margin-right: 8px;
+    }
+}
+
