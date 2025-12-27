@@ -1,0 +1,344 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fafafa;
+    font-family: 'Verdana', sans-serif;
+}
+
+.payment-content {
+    flex: 1;
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.payment-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.saved-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card-item:hover {
+    border-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-item.selected {
+    border-color: #1a1a1a;
+    background-color: #f5f5f5;
+}
+
+.card-item input[type="radio"] {
+    margin-right: 1rem;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    accent-color: #1a1a1a;
+}
+
+.card-details {
+    flex: 1;
+}
+
+.card-number {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.card-holder {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.card-expiry {
+    font-size: 12px;
+    color: #999;
+}
+
+.default-badge {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.delete-card-btn {
+    background-color: transparent;
+    color: #999;
+    border: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.delete-card-btn:hover {
+    background-color: #fee;
+    color: #c33;
+}
+
+.add-card-btn {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 2px dashed #e8e8e8;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Baloo Tammudu", sans-serif;
+}
+
+.add-card-btn:hover {
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.add-card-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+}
+
+.add-card-form h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Baloo Tammudu", sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #1a1a1a;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.default-checkbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.3s;
+    position: relative;
+    margin-bottom: -1px;
+
+}
+
+.default-checkbox:hover {
+    border-color: #000000;
+}
+
+.default-checkbox:checked {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.default-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    border: solid #ffffff;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+    top: 3px;
+    left: 2px;
+}
+
+
+
+.error {
+    color: #c33;
+    font-size: 12px;
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.save-card-btn,
+.cancel-btn {
+    flex: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Baloo Tammudu", sans-serif;
+}
+
+.save-card-btn {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.save-card-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.cancel-btn {
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+}
+
+.cancel-btn:hover {
+    background-color: #e8e8e8;
+}
+
+.buy-button {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    padding: 16px 64px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    font-family: "Baloo Tammudu", sans-serif;
+}
+
+.buy-button:hover:not(:disabled) {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.buy-button:disabled {
+    background-color: #e8e8e8;
+    color: #999;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+.loading-message {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #666;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .payment-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .payment-content h2 {
+        font-size: 28px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .card-item {
+        padding: 1.25rem;
+    }
+
+    .card-number {
+        font-size: 16px;
+    }
+
+    .delete-card-btn {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+    }
+
+    .notification {
+        padding: 1.5rem 2rem;
+        font-size: 20px;
+        max-width: 90%;
+    }
+}

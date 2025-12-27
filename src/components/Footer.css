@@ -1,0 +1,48 @@
+#footer {
+    background-color: #e6007e;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+
+#footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#footer-content > div {
+    margin: 0 20px;
+}
+
+#footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer-social-media a {
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+#facebook-icon {
+    width: 26px;
+    height: 26px;
+    filter: brightness(0) invert(1);
+}
+
+#instagram-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+#footer-social-media a:hover img {
+    transform: scale(1.2);
+}

@@ -1,0 +1,132 @@
+.shop-bar {
+    background: linear-gradient(#2e2a5a, #1d7ea5);
+    color: white;
+    padding: 30px;
+    font-family: 'Verdana', sans-serif;
+}
+
+#close-btn {
+    display: none;
+}
+
+#search-section {
+    margin-bottom: 25px;
+}
+
+#search-section input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Verdana', sans-serif;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+#search-section input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#search-section input:focus {
+    outline: none;
+    border-color: #ffb637;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#filter-section {
+    margin-bottom: 30px;
+}
+
+#filter-section h3 {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+#filter-section label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#filter-section label:hover {
+    color: #5a7e70;
+}
+
+.filter-checkbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.filter-checkbox:hover {
+    border-color: #665d4f;
+}
+
+.filter-checkbox:checked {
+    background-color: white;
+    border-color: white;
+}
+
+.filter-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    border: solid #2e2a5a;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+    top: 3px;
+    left: 2px;
+}
+
+
+@media (max-width: 768px) {
+    .shop-bar {
+        display: none;
+        padding: 20px 15px;
+    }
+
+    .shop-bar.show {
+        display: block;
+    }
+
+    #close-btn {
+        display: block;
+        position: sticky;
+        top: 0;
+        background: #ffb637;
+        color: #000;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        z-index: 10;
+        font-family: 'Verdana', sans-serif;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    #close-btn:active {
+        background: #f1a469;
+    }
+
+    #search-section {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,29 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: node:latest
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+  only:
+    - main
+
+deploy:
+  stage: deploy
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache openssh-client rsync
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  script:
+    - rsync -e "ssh -o StrictHostKeyChecking=no" -avz --delete --chmod=D755,F644 dist/ ubuntu@$SERVER_IP:/var/www/html/
+  only:
+    - main

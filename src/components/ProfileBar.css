@@ -1,0 +1,84 @@
+/* ====== PROFILE BAR ====== */
+.profile-bar {
+    background: linear-gradient(#2e2a5a, #1d7ea5);
+    color: white;
+    padding: 30px;
+    font-family: 'Verdana', sans-serif;
+    width: 250px;
+    min-height: 100vh;
+    flex-shrink: 0;
+}
+
+/* ====== CLOSE BUTTON ====== */
+#profile-close-btn {
+    display: none;
+}
+
+/* ====== SECTIONS ====== */
+.profile-bar-section {
+    margin-bottom: 30px;
+}
+
+.profile-bar-section h3 {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.profile-bar-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-bar-section li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 8px 10px;
+    border-radius: 6px;
+    line-height: 1.4em;
+}
+
+.profile-bar-section li:hover {
+    color: #ffb637;
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 16px;
+}
+
+@media (max-width: 768px) {
+    .profile-bar {
+        display: none;
+        padding: 20px 15px;
+    }
+
+    .profile-bar.show {
+        display: block;
+    }
+
+    #profile-close-btn {
+        display: block;
+        position: sticky;
+        top: 0;
+        background: #ffb637;
+        color: #000;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        z-index: 10;
+        font-family: 'Verdana', sans-serif;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    #profile-close-btn:active {
+        background: #f1a469;
+    }
+}

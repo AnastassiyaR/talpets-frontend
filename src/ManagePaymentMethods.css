@@ -1,0 +1,130 @@
+/* Layout */
+#page { display: flex; flex-direction: column; min-height: 100vh; }
+#wrapper { display: flex; flex: 1; }
+#content { flex: 1; padding: 2rem; max-width: 1400px; margin: 0 auto; }
+#content h2 { font-size: 2rem; margin-bottom: 2rem; color: #333; }
+
+/* Cards Grid */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Card Styles */
+.card {
+    background: linear-gradient(90deg, #d32f2f 50%, #f57c00 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    color: white;
+    min-height: 220px;
+    transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.card header { display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
+
+.card .del {
+    background: rgba(0,0,0,0.3);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card .del:hover { background: rgba(0,0,0,0.5); }
+.card .num { font: 1.5rem 'Courier New', monospace; margin-bottom: 1rem; }
+.card .name { text-transform: uppercase; margin-bottom: 0.5rem; }
+
+.card .btn {
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,0.5);
+    color: #1a1a1a;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.card .btn:hover { background: rgba(255,255,255,0.4); }
+
+/* Add Card Button */
+#add {
+    background: white;
+    border: 2px dashed #ddd;
+    border-radius: 16px;
+    padding: 2rem;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#add:hover { border-color: #667eea; background: #f9f9ff; }
+#add .icon { font-size: 3rem; color: #667eea; }
+#add p { color: #666; margin: 0; }
+
+/* Modal */
+#modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+#modal > div {
+    background: #efefef;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+}
+
+#modal h3 { margin: 0 0 1.5rem; color: #333; }
+
+/* Form */
+.fg { margin-bottom: 1.3rem; }
+.fg label { display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500; }
+.fg input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.fg input:focus { outline: none; border-color: #667eea; }
+
+#row { display: flex; gap: 1rem; }
+.err { color: #f44336; font-size: 0.85rem; margin-top: 0.3rem; }
+#check { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; cursor: pointer; }
+
+/* Buttons */
+#btns { display: flex; gap: 1rem; }
+#submit, #cancel { flex: 1; padding: 1rem; border: none; border-radius: 8px; cursor: pointer; transition: background 0.3s; }
+#submit { background: #5568d3; color: white; }
+#submit:hover { background: #764ba2; }
+#cancel { background: #c53030; color: #fff; }
+#cancel:hover { background: #8a2a2a; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    #wrapper { flex-direction: column; }
+    #content { padding: 1rem; }
+    #cards { grid-template-columns: 1fr; }
+    #row { flex-direction: column; }
+    #modal > div { padding: 1.5rem; }
+}

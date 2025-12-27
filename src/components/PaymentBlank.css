@@ -1,0 +1,76 @@
+/* PaymentBlank Styles */
+* {
+    box-sizing: border-box;
+}
+
+#payment-form {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 2rem;
+    min-width: 500px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-family: "Baloo Tammudu", sans-serif;
+}
+
+#store-name {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+#order-amount-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+#order-number {
+    font-size: 14px;
+    color: #999;
+}
+
+#amount {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+#other-methods-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
+#card-input {
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+#card-input input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+#card-input input:focus { outline: none; }
+
+hr { border: none; border-top: 1px solid #e8e8e8; margin: 1.5rem 0; }
+
+#payment-image-holder {
+    display: flex;
+    justify-content: space-between;
+}
+
+#payment-image-holder a {
+    transition: transform 0.2s;
+}
+#payment-image-holder a:hover {
+    transform: translateY(-2px);
+}
+
+#payment-image-holder img {
+    width: 100px;
+}

@@ -1,0 +1,149 @@
+.cart-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #d7d7d7;
+    font-family: "Baloo Tammudu", sans-serif;
+}
+
+.cart-content {
+    flex: 1;
+    padding: 3rem 2rem;
+}
+
+.cart-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.cart-item {
+    display: flex;
+    max-width: 700px;
+    padding: 1.5rem;
+    background-color: #ddcede;
+    border: 2px solid #908ab5;
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+}
+
+.cart-item:hover {
+    border-color: #2f4666;
+}
+
+.cart-item-img {
+    margin-right: 1.5rem;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cart-item-details h3 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 900;
+    color: #1a1a1a;
+}
+
+.cart-item-details p {
+    margin: 0;
+    font-size: 20px;
+    color: #181818;
+}
+
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cart-item-quantity button {
+    padding: 6px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 32px;
+}
+
+.cart-item-quantity button:hover {
+    background-color: #f5f5f5;
+    border-color: #d0d0d0;
+}
+
+.remove-btn:hover {
+    color: #d32f2f;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    flex: 1;
+    margin: 0 auto;
+}
+
+.cart-summary h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.checkout-btn {
+    padding: 12px 32px;
+    background-color: #453884;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    letter-spacing: 0.3px;
+}
+
+.checkout-btn:hover {
+    background-color: #457a38;
+}
+
+
+.empty-cart {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 4rem;
+    color: #000000;
+}
+
+.loading-message,
+.error-message {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 3rem;
+    color: #666;
+}
+
+.error-message {
+    color: #d32f2f;
+}
