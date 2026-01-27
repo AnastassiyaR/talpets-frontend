@@ -111,6 +111,9 @@ docker rm talpets-frontend
 * Vite
 * Axios
 
+**Domain:**
+* No-IP
+
 ---
 
 ## Project introduction/purpose
