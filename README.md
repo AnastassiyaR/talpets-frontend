@@ -29,7 +29,8 @@ The application will be available at `http://localhost:5173`
 ### Clone the repository
 
 ```bash
-git clone https://github.com/AnastassiyaR/talpets-frontend.git
+git clone https://gitlab.cs.taltech.ee/anrozk/iti0302-2025-frontend.git
+cd iti0302-2025-frontend
 ```
 
 ### Install dependencies
